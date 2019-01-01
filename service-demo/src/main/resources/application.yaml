@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service-demo
+dubbo:
+  scan:
+    basePackages: com.laylib.sdr.service.demo.impl
+  application:
+    id: service-demo
+    name: service-demo
+  registry:
+    id: zk-registry
+    address: zookeeper://localhost:2181
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880

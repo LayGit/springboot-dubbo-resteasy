@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: api-demo
+server:
+  port: 8080
+resteasy:
+  jaxrs:
+    app:
+      registration: property
+      classes: com.laylib.sdr.api.demo.JaxrsApplication
+dubbo:
+  application:
+    id: api-demo
+    name: api-demo
+  consumer:
+    check: false
+  registry:
+    id: zk-registry
+    address: zookeeper://localhost:2181
